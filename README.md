@@ -2,7 +2,7 @@
 
 面向 Cursor 的嘉然（Diana）日间 / 暗夜双主题。
 
-> **预发布状态：`0.1.0-rc.1`。** 可发布部分只使用 Cursor 兼容的 VS Code 颜色主题接口；最后一轮真机回归和 VSIX 内容审计通过后再创建正式 Release。
+> **公开测试版：[`v0.1.0-beta.1`](https://github.com/lanmengSakura/diana-cursor-theme/releases/tag/v0.1.0-beta.1)。** GitHub Release 已提供只含原生颜色主题的 VSIX；完整美术仍是仓库蓝图，正式稳定版等待扩大真机回归。
 
 ## 两层边界
 
@@ -10,7 +10,7 @@
 
 `themes/` 提供 `Diana Night` 与 `Diana Day`，负责侧栏、编辑器、终端、差异视图和语法颜色。它不修改 Cursor 安装目录，不读取账号状态，不开启调试端口，也不运行后台进程。
 
-最终 VSIX 只包含颜色主题和必要元数据；`.vscodeignore` 会排除下方的实验美术蓝图。
+Beta VSIX 只包含颜色主题和必要元数据；`.vscodeignore` 会排除下方的实验美术蓝图。
 
 ### 仓库内视觉蓝图
 

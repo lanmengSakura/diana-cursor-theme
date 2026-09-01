@@ -1,6 +1,6 @@
-# Diana Cursor Theme 0.1.0-rc.1
+# Diana Cursor Theme 0.1.0-beta.1
 
-Status: **source pre-release; no VSIX or GitHub Release yet**.
+Status: **public GitHub Beta with a color-theme VSIX; stable release still pending**.
 
 ## Public implementation
 
