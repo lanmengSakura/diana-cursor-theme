@@ -1,0 +1,8 @@
+.git/**
+.github/**
+assets/**
+visual-blueprint/**
+scripts/**
+PRE_RELEASE.md
+SECURITY.md
+ASSET_LICENSES.md

@@ -1,0 +1,47 @@
+{
+  "name": "diana-cursor-theme",
+  "displayName": "Diana Theme for Cursor",
+  "description": "Diana day and night color themes for Cursor. Full artwork is tracked separately from the official color-theme extension.",
+  "version": "0.1.0",
+  "publisher": "lanmengsakura",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lanmengSakura/diana-cursor-theme.git"
+  },
+  "homepage": "https://github.com/lanmengSakura/diana-cursor-theme#readme",
+  "bugs": {
+    "url": "https://github.com/lanmengSakura/diana-cursor-theme/issues"
+  },
+  "scripts": {
+    "test": "node scripts/validate-release.mjs"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "Diana",
+    "嘉然",
+    "Cursor",
+    "theme",
+    "day",
+    "night"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Diana Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/diana-night-color-theme.json"
+      },
+      {
+        "label": "Diana Day",
+        "uiTheme": "vs",
+        "path": "./themes/diana-day-color-theme.json"
+      }
+    ]
+  }
+}
