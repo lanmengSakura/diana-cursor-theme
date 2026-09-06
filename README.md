@@ -1,5 +1,9 @@
 # Diana Cursor Theme
 
+[在线体验 Cursor 主题](https://diana-launcher-demo.szbluedream01.chatgpt.site/themes?app=cursor) · [启动器演示](https://diana-launcher-demo.szbluedream01.chatgpt.site/)
+
+可切换日间、暗夜与原版参考，查看示例界面。网页不操作本机，演示效果不代表已完成真实挂载。
+
 面向 Cursor 的嘉然（Diana）日间 / 暗夜双主题。
 
 > **公开测试版：[`v0.1.0-beta.1`](https://github.com/lanmengSakura/diana-cursor-theme/releases/tag/v0.1.0-beta.1)。** GitHub Release 已提供只含原生颜色主题的 VSIX；完整美术仍是仓库蓝图，正式稳定版等待扩大真机回归。
