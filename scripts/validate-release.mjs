@@ -76,6 +76,14 @@ if (fs.existsSync(packagePath)) {
   if (manifest.license !== "MIT") failures.push("package.json license must be MIT");
 }
 
+const artwork = fs.readFileSync(path.join(root, "visual-blueprint/diana-cursor.css"), "utf8");
+const dayDoodle = artwork.match(/\.monaco-workbench\.hc-light #diana-cursor-theme-chrome \.diana-cursor-doodle\s*\{([^}]+)\}/)?.[1] ?? "";
+if (!dayDoodle.includes('mask-image: url("__DIANA_DOODLE__")')) failures.push("day doodle must tint the approved alpha artwork");
+if (!dayDoodle.includes("background: var(--diana-line-berry)")) failures.push("day doodle must use the shared berry colour");
+if (!dayDoodle.includes("mask-composite: intersect")) failures.push("day doodle must retain its edge fade");
+const dayOpacity = Number(dayDoodle.match(/opacity:\s*([\d.]+)/)?.[1]);
+if (!(dayOpacity >= 0.6 && dayOpacity < 1)) failures.push("day doodle opacity is too faint or opaque");
+
 if (failures.length > 0) {
   console.error(JSON.stringify({ ok: false, failures }, null, 2));
   process.exit(1);
