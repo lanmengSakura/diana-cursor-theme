@@ -1,4 +1,7 @@
 .git/**
+runtime/**
+tests/**
+dist/**
 .github/**
 assets/**
 visual-blueprint/**

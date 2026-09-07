@@ -14,7 +14,9 @@
     "url": "https://github.com/lanmengSakura/diana-cursor-theme/issues"
   },
   "scripts": {
-    "test": "node scripts/validate-release.mjs"
+    "test": "node scripts/validate-release.mjs && node --test tests/*.test.mjs",
+    "build:runtime": "node scripts/build-runtime.mjs",
+    "check:runtime": "node scripts/build-runtime.mjs && node dist/runtime/adapter.mjs self-test"
   },
   "engines": {
     "vscode": "^1.90.0"

@@ -1,0 +1,15 @@
+{
+  "name": "diana-cursor-theme-delivery-candidate",
+  "paths": [
+    {
+      "source": "dist/runtime",
+      "target": "runtime"
+    },
+    "README.md",
+    "PRE_RELEASE.md",
+    "DELIVERY.md",
+    "LICENSE",
+    "ASSET_LICENSES.md",
+    "SECURITY.md"
+  ]
+}

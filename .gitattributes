@@ -1,0 +1,3 @@
+runtime/** text eol=lf
+scripts/*.mjs text eol=lf
+visual-blueprint/*.css text eol=lf

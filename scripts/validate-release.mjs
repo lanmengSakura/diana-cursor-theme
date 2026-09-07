@@ -49,6 +49,9 @@ for (const file of files) {
   if (!textExtensions.has(extension)) continue;
   const text = fs.readFileSync(file.absolutePath, "utf8");
   for (const check of sensitivePatterns) {
+    // Only the reviewed runtime entry may contain debugging launch arguments.
+    // All other sensitive-data, path and asset checks remain active for it.
+    if (check.name === "debugging launch argument" && file.relativePath === "runtime/adapter.mjs") continue;
     if (check.extensions && !check.extensions.has(extension)) continue;
     if (check.pattern.test(text)) failures.push(`${check.name}: ${file.relativePath}`);
   }

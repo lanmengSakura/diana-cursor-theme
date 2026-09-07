@@ -6,7 +6,11 @@
 
 面向 Cursor 的嘉然（Diana）日间 / 暗夜双主题。
 
-> **公开测试版：[`v0.1.0-beta.1`](https://github.com/lanmengSakura/diana-cursor-theme/releases/tag/v0.1.0-beta.1)。** GitHub Release 已提供只含原生颜色主题的 VSIX；完整美术仍是仓库蓝图，正式稳定版等待扩大真机回归。
+> **公开测试版：[`v0.1.0-beta.2`](https://github.com/lanmengSakura/diana-cursor-theme/releases/tag/v0.1.0-beta.2)。** 除原生颜色 VSIX 外，新增 Cursor 3.17.21 专用的实验性完整美术运行包，并修复跟随系统时的明暗混用。不是全版本兼容承诺。
+
+## 首次交付说明
+
+使用前请看 [对应入口、依赖、恢复方式与测试范围](DELIVERY.md)。完整美术可使用新版多合一启动器，或下载本 Release 的 `diana-cursor-theme-0.1.0-beta.2-runtime.zip`；需要 Windows、Node.js 22+、Cursor 3.17.21 和单独风险确认。旧 VSIX 不会自动获得注入能力。
 
 ## 两层边界
 
@@ -24,19 +28,23 @@ Beta VSIX 只包含颜色主题和必要元数据；`.vscodeignore` 会排除下
 |---|---|
 | `__DIANA_CORNER__` | `assets/diana-left-top-detailed-corner-mask-v7.png` |
 | `__DIANA_UPPER__` | `assets/diana-line-art-approved-upper.png` |
-| `__DIANA_NIGHT_PORTRAIT__` / `__DIANA_DAY_PORTRAIT__` | `assets/diana-night-v3.png` |
+| `__DIANA_NIGHT_PORTRAIT__` / `__DIANA_DAY_PORTRAIT__` | `assets/diana-night-v3.png` / `assets/diana-corner-cutout-v2.png` |
 | `__DIANA_DOODLE__` | `assets/diana-doodle-chalk-v2-approved.png` |
 | `__DIANA_STAR__` | `assets/diana-hand-star-reference-v2.png` |
 | `__DIANA_CANDY__` | `assets/diana-candy-wrapped-v1.png` |
 | `__DIANA_LOLLIPOP__` | `assets/diana-candy-lollipop-v1.png` |
 
-这份蓝图本身不会自动挂载。已验证的本机加载器依赖版本识别、回环调试与本地状态，因此不进入公开仓库，也不能把“CSS 可审阅”写成“所有版本均可安全挂载”。
+这份蓝图本身不会自动挂载。新增 `runtime/` 是独立的版本限定运行组件，必须显式同意风险；旧本机实验目录及其私人状态仍不分发，也不能把“CSS 可审阅”写成“所有版本均可安全挂载”。
 
 ## 日间线稿修正（2026-09-06）
 
 完整美术蓝图的左下简笔画改用原图透明轮廓着色为莓粉，解决浅底上粉笔线稿过淡的问题；夜间颜色、图案大小与位置不变。
 
-已接入完整美术的本机加载器，需要同步实际加载的 CSS、文件校验清单及启动器认可的清单指纹，再重新挂载；仅更新网页演示或原生颜色 VSIX 不会更新这些装饰。不要跳过完整性校验。本仓库不包含机器专用加载器，现有 Beta VSIX 的内容和用途不变。
+此修正已随 v3 完整运行组件交付；仅更新网页演示或原生颜色 VSIX 不会更新这些装饰。不要跳过完整性校验。本仓库不包含机器专用加载器或用户状态，原生颜色 VSIX 内容和用途不变。
+
+## 跟随系统修正（2026-09-07）
+
+v3 将用户请求的 system 与实际生效的 light/dark 分开，依据原生界面配色同步美术层，并在挂载成功条件中检查颜色一致性。Cursor 3.17.21 当前系统浅色、手动日夜、窄窗输入与撤下恢复已复验；扩大场景及不同版本仍需单独验证。
 
 ## 验证
 
